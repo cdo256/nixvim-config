@@ -10,7 +10,7 @@
       workspaces = [
         {
           name = "default";
-          path = "~/Documents";
+          path = "~";
         }
       ];
       mappings = {
