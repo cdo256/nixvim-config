@@ -7,7 +7,7 @@
   plugins.toggleterm = {
     enable = true;
     settings = {
-      direction = "vertical";
+      direction = "horizontal";
       float_opts = {
         border = "curved";
         height = 30;
