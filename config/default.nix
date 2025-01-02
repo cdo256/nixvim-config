@@ -2,6 +2,7 @@
 {
   imports = [
     ./autocommands.nix
+    ./cdo.nix
     ./keys.nix
     ./sets.nix
     ./highlight.nix
@@ -61,7 +62,7 @@
   ];
   options = {
     theme = lib.mkOption {
-      default = lib.mkDefault "paradise";
+      default = lib.mkDefault "tokyonight";
       type = lib.types.enum [
         "aquarium"
         "decay"
