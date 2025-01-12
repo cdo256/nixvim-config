@@ -33,6 +33,25 @@
     }
     {
       mode = "n";
+      key = "<leader>fS";
+      action.__raw = ''
+        function()
+          require("telescope.builtin").find_files({
+            hidden = true,
+            no_ignore = true,
+            search_dirs = {
+              "/"
+            }
+          })
+        end
+      '';
+      options = {
+        desc = "Find system files";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>fW";
       action.__raw = ''
         function()
