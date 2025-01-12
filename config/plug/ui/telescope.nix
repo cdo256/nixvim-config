@@ -17,7 +17,13 @@
       key = "<leader>fF";
       action.__raw = ''
         function()
-          require("telescope.builtin").find_files({ hidden = true, no_ignore = true})
+          require("telescope.builtin").find_files({
+            hidden = true,
+            no_ignore = true,
+            search_dirs = {
+              "~"
+            }
+          })
         end
       '';
       options = {
