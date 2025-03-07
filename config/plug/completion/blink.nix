@@ -6,7 +6,8 @@
 }:
 {
   extraPlugins = with pkgs.vimPlugins; [
-    blink-cmp-copilot
+    #FIXME: Spitting out a lot of errors.
+    #blink-cmp-copilot
   ];
 
   plugins = {
@@ -20,6 +21,7 @@
         capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
       '';
     blink-cmp = {
+      #FIXME: Spitting out a lot of errors.
       enable = true;
       package = inputs.blink-cmp.packages.${system}.default;
       luaConfig.pre = # lua

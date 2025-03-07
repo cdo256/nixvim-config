@@ -1,10 +1,10 @@
 { lib, config, ... }:
 {
   plugins.copilot-cmp = lib.mkIf config.plugins.cmp.enable {
-    enable = true;
+    enable = false;
   };
   plugins.copilot-lua = {
-    enable = true;
+    enable = false;
     suggestion = {
       enabled = false;
     };
