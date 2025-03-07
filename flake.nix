@@ -1,11 +1,11 @@
 {
-  description = "Elyth's NeoVim configuration";
+  description = "Christina's NeoVim configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixvim = {
-      url = "github:nix-community/nixvim";
+      url = "github:cdo256/nixvim?ref=fix-cornelis";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     pre-commit-hooks = {
@@ -32,6 +32,8 @@
         "x86_64-darwin"
       ];
 
+      #debug = true;
+
       perSystem =
         {
           system,
@@ -41,15 +43,19 @@
         }:
         let
           nixvim' = nixvim.legacyPackages.${system};
-          nvim = nixvim'.makeNixvimWithModule {
+          nvimConfig = {
             inherit pkgs;
             module = ./config;
             extraSpecialArgs = {
               inherit inputs system;
             };
           };
+          nvim = nixvim'.makeNixvimWithModule nvimConfig;
         in
         {
+          #debugAttrs = {
+          #  inherit nvim nixvim' nvimConfig;
+          #};
           checks = {
             pre-commit-check = pre-commit-hooks.lib.${system}.run {
               src = ./.;
