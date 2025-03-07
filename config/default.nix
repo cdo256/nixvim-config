@@ -36,6 +36,7 @@
     #./plug/statusline/staline.nix
 
     ./plug/toggleterm.nix
+    ./plug/cornelis.nix
 
     ./plug/treesitter/treesitter-context.nix
     ./plug/treesitter/treesitter-textobjects.nix
