@@ -22,14 +22,6 @@ in
         keys = "<leader>";
       }
       {
-        mode = "x";
-        keys = "<leader>";
-      }
-      {
-        mode = "i";
-        keys = "<C-x>";
-      }
-      {
         mode = "n";
         keys = "g";
       }
