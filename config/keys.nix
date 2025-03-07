@@ -5,11 +5,6 @@
     # General maps
     {
       mode = "n";
-      key = "<C-c>";
-      action = "ciw";
-    }
-    {
-      mode = "n";
       key = "<leader>R";
       action = ":%s/\<C-r><C-w>//g<Left><Left>";
       options = {
@@ -318,10 +313,54 @@
       };
     }
 
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<C-p>";
+      action = ''"+p'';
+      options = {
+        desc = "Paste from clipboard.";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<C-P>";
+      action = ''"+P'';
+      options = {
+        desc = "Paste from clipboard.";
+      };
+    }
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<C-y>";
+      action = ''"+y'';
+      options = {
+        desc = "Yank to clipboard.";
+      };
+    }
+
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<C-Y>";
+      action = ''"+Y'';
+      options = {
+        desc = "Yank to clipboard.";
+      };
+    }
+
     # Paste stuff without saving the deleted word into the buffer
     {
       mode = "x";
-      key = "<leader>p";
+      key = "<C-X>";
       action = ''"_dP'';
       options = {
         desc = "Deletes to void register and paste over";
@@ -334,7 +373,7 @@
         "n"
         "v"
       ];
-      key = "<leader>D";
+      key = "<C-x>";
       action = ''"_d'';
       options = {
         desc = "Delete to void register";
