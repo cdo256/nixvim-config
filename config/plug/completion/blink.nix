@@ -41,11 +41,11 @@
           default = [
             "buffer"
             "calc"
-            "copilot"
+            #"copilot"
             "emoji"
             "git"
             "lsp"
-            "luasnip"
+            #"luasnip"
             "path"
             "snippets"
             "spell"
