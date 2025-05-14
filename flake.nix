@@ -74,7 +74,11 @@
 
           formatter = pkgs.nixfmt-rfc-style;
 
-          packages.default = nvim;
+          packages = {
+            neovim = nvim;
+            nixvim = nvim;
+            default = nvim;
+          };
 
           devShells = {
             default = with pkgs; mkShell { inherit (self'.checks.pre-commit-check) shellHook; };
