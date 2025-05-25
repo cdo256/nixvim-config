@@ -63,9 +63,10 @@
   ];
   options = {
     theme = lib.mkOption {
-      default = lib.mkDefault "tokyonight";
+      default = lib.mkDefault "cyberdream";
       type = lib.types.enum [
         "aquarium"
+        "cyberdream"
         "decay"
         "edge-dark"
         "everblush"
@@ -79,6 +80,7 @@
         "ocean"
         "oxocarbon"
         "paradise"
+        "tn-cdo" # tokyonight with improved contrast
         "tokyonight"
         "yoru"
       ];
@@ -93,7 +95,7 @@
   };
   config = {
     # The base16 theme to use, if you want to use another theme, change it in colorscheme.nix
-    theme = "paradise";
+    theme = "tn-cdo";
     extraConfigLua = ''
       _G.theme = "${config.theme}"
     '';
