@@ -327,7 +327,7 @@
 
     {
       mode = "n";
-      key = "<C-P>";
+      key = "<C-S-P>";
       action = ''"+P'';
       options = {
         desc = "Paste from clipboard.";
@@ -350,7 +350,7 @@
         "n"
         "v"
       ];
-      key = "<C-Y>";
+      key = "<C-S-Y>";
       action = ''"+Y'';
       options = {
         desc = "Yank to clipboard.";
@@ -360,7 +360,7 @@
     # Paste stuff without saving the deleted word into the buffer
     {
       mode = "x";
-      key = "<C-X>";
+      key = "<C-S-X>";
       action = ''"_dP'';
       options = {
         desc = "Deletes to void register and paste over";
